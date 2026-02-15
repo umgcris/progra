@@ -1,4 +1,5 @@
 #include <iostream>
+ //Clase persona 
 using namespace std;
 
 class Persona{
@@ -21,4 +22,4 @@ class Persona{
 		void actualizar();
 		void borrar();
 		void crear();
-};
+};	
