@@ -3,14 +3,32 @@
 using namespace std; 
 class Cliente : Persona{
 	// Atributos
-	private :
-		string nit;
+	private : string nit;
 	// Constructor 
+	public : 
 	Cliente (){
-		
 	}
-	Cliente (string nom, string ape, string dir, int tel, string fn, string n) : Persona(nom, ape, dir, tel, fn){
+	 
+	Cliente (string nom, string ape, string dir, int tel,string n) : Persona(nom, ape, dir, tel){
 		nit = n;			
+	}
+	//metodos
+	// set(modificar) 
+	void setNit(string n){ nit = n;}
+	void setNombres(string nom){ nombres = nom;}
+	void serApellidos(string ape){ apellidos = ape;}
+	void setDireccion(string dir){ direccion = dir;}
+	void setTelefono(int tel){ telefono = tel;}	 
+	
+	// get(modificar)
+	string getNit(){return nit;	} 
+	string getNombres(){return nombres;	} 
+	string getApellidos(){return apellidos;	}
+	string getDireccion(){return direccion;}  
+	int getTelefono(){return telefono;} 
+	void mostrar(){
+		cout<<"______________"<<endl;
+		cout<<nit<<","<<nombres<<","<<apellidos<<","<<direccion<<","<<telefono<<endl;
 	}
 	void leer(){
 		cout<<"Nit: "<<nit<<endl;
@@ -18,7 +36,7 @@ class Cliente : Persona{
 		cout<<"Apellidos: "<<apellidos<<endl;
 		cout<<"Direccion: "<<direccion<<endl;
 		cout<<"Teleofono: "<<telefono<<endl;
-		cout<<"Fecha Nacimiento: "<<fecha_nacimiento<<endl;
+		
 	}
 	
 };
